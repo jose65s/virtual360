@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Visita Virtual 360°</title>
+
+    <!-- Pannellum (visor 360°) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.7/build/pannellum.css">
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.7/build/pannellum.js"></script>
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Pantalla de carga (como la de AGSA) -->
+    <div id="loading-screen">
+        <div class="loading-box">
+            <img id="loading-logo" src="images/logo.png" alt="Logo" onerror="this.style.display='none'">
+            <div class="spinner"></div>
+            <p>POR FAVOR ESPERA, ESTAMOS CARGANDO<br>LA VISITA VIRTUAL 360°</p>
+        </div>
+    </div>
+
+    <!-- Contenedor del visor 360° -->
+    <div id="panorama"></div>
+
+    <!-- Barra superior con título -->
+    <div id="topbar">
+        <span id="tour-title">Visita Virtual 360°</span>
+        <button id="btn-menu" title="Ambientes">☰</button>
+    </div>
+
+    <!-- Menú lateral de ambientes -->
+    <div id="scene-menu">
+        <div class="menu-header">
+            <span>Ambientes</span>
+            <button id="btn-close-menu">✕</button>
+        </div>
+        <div id="scene-list"><!-- se genera desde tour.js --></div>
+    </div>
+
+    <!-- Lógica del tour -->
+    <script src="js/tour.js"></script>
+</body>
+</html>
